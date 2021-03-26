@@ -115,8 +115,8 @@ a.active {
 /********************************content**********************************/
 
 .content {
-  margin-top: 25vh;
-  margin-bottom: 25vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
   width: 100vw;
   display: flex;
   flex: 1 0 auto;
