@@ -4,6 +4,7 @@ import Marquee from './Marquee';
 import {
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 
 function Routes({ jsonData }) {
