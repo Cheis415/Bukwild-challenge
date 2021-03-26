@@ -1,13 +1,273 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/******************************* Body ************************************/
+
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 85vh;
+  max-width: 1440px;
+  color: white;
+  
 }
+
+.background {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: fixed;
+  z-index: -1;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+/**********************************Header************************************/
+
+.header {
+  top: 0;
+  margin: 0;
+  background-color: transparent;
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  justify-content: space-between;
+  max-width: 1440px;
+  min-width: 320px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.logo {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1ch;
+  justify-self: start;
+  color: white;
+  margin-left: 9vw;
+}
+
+.Nav {
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 9vw;
+  justify-self: start;
+  height: auto;
+  width: fit-content;
+  color: white;
+}
+
+.link {
+  list-style: none;
+  text-align: center;
+  margin-top: .5rem;
+  justify-self: start;
+  height: auto;
+  width: auto;
+  color: white;
+}
+
+a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-size: .875rem;
+}
+
+a.active {
+  display: flex;
+  color: orange;
+  text-decoration: none;
+  font-size: .875rem;
+}
+
+.button-container {
+  width: 19%;
+  height: fit-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: 5vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-button {
+  padding: .5rem 2rem .5rem 2rem;
+  font-size: .75rem;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.507);
+}
+
+/********************************content**********************************/
+
+.content {
+  margin-top: 8rem;
+  margin-bottom: 11rem;
+  width: 100vw;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headline {
+  font-size: 5.25rem;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  width: 40vw;
+  justify-self: flex-start;
+}
+
+.subhead {
+  justify-self: flex-end;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-left: 3rem;
+  font-stretch: normal;
+  width: 25vw;
+  color: rgba(255, 255, 255, 0.685);
+  z-index: 1;
+}
+
+/*************************footer**********************/
+
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  color: black;
+  bottom: 0;
+  margin: 0 auto;
+  justify-content: center;
+  height: 22vh;
+  width: 81vw;
+  background-color: white;
+
+}
+
+.cta {
+  align-self: center;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  font-weight: bolder;
+  font-size: 1.8vw;
+  max-height:fit-content;
+  min-width: 30%;
+  max-width: 50%;
+  
+}
+
+.lets-talk {
+  font-size: .7rem;
+  padding-left: 5vw;
+  width: 15%;
+  align-self: center;
+}
+
+.font-icon {
+  height: 100%;
+  margin-right: 22vw;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .header {
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    justify-content:space-evenly;
+    max-width: 600px;
+    min-width: 320px;
+  }
+
+  .logo-container {
+    height: fit-content;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin: 1rem 0 0 0;
+  }
+
+  .Nav {
+    margin: 0;
+  }
+
+  .contact-button {
+    justify-self: flex-end;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .headline {
+    justify-self: center;
+    right: 0;
+    left: 0;
+    margin-right: 3vw;
+    padding-top: 7rem;
+    width: 80vw;
+    font-size: 16vw;
+    margin: 0;
+
+  }
+
+  .subhead {
+    right: 0;
+    left: 0;
+    padding-top: 7rem;
+    font-size: 4vw;
+    width: 80vw;
+    margin: 0;
+  }
+
+  .cta {
+    margin: 9vh 0 10vh 6vw;
+    top: 50%;
+    bottom: 50%; 
+    font-weight: bolder;
+    font-size: 3vw;
+    max-height:fit-content;
+    min-width: 30%;
+    max-width: 50%;
+    
+  }
+
+  .lets-talk {
+    font-size: 1.6vw;
+    left: 10%;
+    z-index: 30;
+    margin-left: 1vw;
+    margin-right: 0;
+    width: 20%;
+  } 
+
+   .font-icon {
+    margin-right: 10vw;
+  }
+}
+
+ 
