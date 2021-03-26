@@ -12,6 +12,9 @@ function Routes({ jsonData }) {
     
       <div className="App">
         <Switch>
+            <Route exact path="/">
+              <Redirect to="/industries" />
+            </Route>
           {jsonData.pages ? jsonData.pages.map((data) => {
             let val = data.blocks[0];
             return(
